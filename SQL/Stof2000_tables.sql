@@ -29,3 +29,10 @@ CREATE TABLE FARVE(
 	Farvenavn	nvarchar(MAX)	NOT NULL DEFAULT 'Ukendt', 
 	CONSTRAINT		FARVE_PK	PRIMARY KEY(FarveID)
 );
+
+CREATE TABLE MØNSTER(
+	MønsterID		int		NOT NULL IDENTITY(1, 1),
+	MønsterNavn		nvarchar(MAX)	NOT NULL DEFAULT 'Intet navn'
+	CONSTRAINT		MØNSTER_PK		PRIMARY KEY(MønsterID)
+);
+
