@@ -1,6 +1,7 @@
 USE DB2017_CXX
 
 CREATE TABLE PRODUCT_STOF2000 (
+	ItemID			int		NOT NULL IDENTITY(1,1),
 	Varenummer		Int		NOT NULL,
 	Varenavn		nvarchar(MAX)	NOT NULL DEFAULT 'Ukendt',
 	Beskrivelse		nvarchar(MAX)	NOT NULL DEFAULT 'Der findes ingen beskrivelse for denne vare.',
@@ -9,7 +10,7 @@ CREATE TABLE PRODUCT_STOF2000 (
 	Stoftype		Int				NULL,
 	Farve			Int				NULL, 
 	Mønster			nvarchar(MAX)	NULL,
-	CONSTRAINT		PRODUCT_STOF2000_PK		PRIMARY KEY(Varenummer),
+	CONSTRAINT		PRODUCT_STOF2000_PK		PRIMARY KEY(ItemID),
 	CONSTRAINT		PRODUCT_STOF2000_FK		FOREIGN KEY(Stoftype)
 			REFERENCES		STOFTYPE(StofID)
 			ON UPDATE CASCADE, 
